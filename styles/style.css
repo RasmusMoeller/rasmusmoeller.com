@@ -5,7 +5,7 @@ body {
 .header {
   width: 100%;
   height: 40em;
-  background: linear-gradient(#FF416C, #FF4B2B);
+  background: linear-gradient(#4A00E0, #8E2DE2);
   font-family: roboto slab; }
   .header h1 {
     font-weight: 400;
@@ -25,7 +25,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-bottom: 4px solid #d63e23; }
+  border-bottom: 4px solid #7d27cc; }
 
 .brand {
   float: left;
@@ -110,7 +110,7 @@ body {
   -webkit-transition: all 0.2s ease-out; }
   .portfolio_button:hover {
     background: white;
-    color: #FF4B2B; }
+    color: #8E2DE2; }
 
 pre {
   font-family: roboto slab; }
@@ -167,7 +167,7 @@ pre {
   border: 2px solid #d4d4d4;
   -webkit-transition: all 0.2s ease-out; }
   .project_latest:hover {
-    border: 2px solid #FF4B2B; }
+    border: 2px solid #8E2DE2; }
 
 .latest_projects {
   justify-content: center;
@@ -199,8 +199,8 @@ pre {
     color: #cecece; }
   .projects_link:hover {
     color: white;
-    background: #FF4B2B;
-    border: 2px solid #d63e23; }
+    background: #8E2DE2;
+    border: 2px solid #7d27cc; }
     .projects_link:hover i {
       color: white; }
 
@@ -210,7 +210,7 @@ pre {
   height: 3.5em; }
   .navbg ul a {
     font-family: roboto slab;
-    color: #FF416C; }
+    color: #4A00E0; }
     .navbg ul a .active {
       font-weight: 600;
       opacity: 1 !important; }
@@ -223,11 +223,11 @@ pre {
   align-items: center; }
 
 .contact_area {
-  background: -webkit-linear-gradient(#FF416C, #FF4B2B);
+  background: -webkit-linear-gradient(#4A00E0, #8E2DE2);
   max-width: 500px;
   width: 100%;
   height: 350px;
-  border-bottom: 4px solid #d63e23;
+  border-bottom: 4px solid #7d27cc;
   border-radius: 6px;
   color: white;
   font-family: roboto slab;
@@ -261,7 +261,7 @@ pre {
     -webkit-transition: all 0.2s ease-out; }
     .contact_area .mail_link:hover {
       background: white;
-      color: #FF4B2B; }
+      color: #8E2DE2; }
   .contact_area .split {
     width: 60%;
     border-bottom: 2px solid white;
