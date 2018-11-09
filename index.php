@@ -61,6 +61,13 @@
         </div>
       </div>
 
+      <div class="section hire">
+        <div class="content_wrapper">
+
+          <h1>Need something designed?</h1>
+          <a href="contact.php">Hire me!</a>
+
+        </div>
       </div>
 
       <?php include 'includes/footer.php' ?>
