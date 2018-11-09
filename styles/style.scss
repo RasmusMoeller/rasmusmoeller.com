@@ -95,7 +95,7 @@ body {
   -webkit-transition: all 0.2s ease-out;
   opacity: 0;
   font-family: $font;
-  z-index: 2;
+  z-index: 7;
   ul {
     background: #f1f1f1;
     margin: 0px;
@@ -115,7 +115,7 @@ body {
           &:hover {
             padding: 16px 15px 16px 29px;
             background: #e4e4e4;
-            color: black;
+            color: $main2;
           }
        }
      }
@@ -123,12 +123,12 @@ body {
 }
 
 .fas.fa-bars {
-  color: white;
+  color: $main2;
   position: fixed;
   font-size: 36px;
   right: 17px;
   top: 12px;
-  z-index: 6;
+  z-index: 8;
   display: none;
   cursor: pointer;
 }
@@ -166,6 +166,16 @@ pre {
   color: #bfbfbf;
   font-size: 16px;
   letter-spacing: 1px;
+  a {
+    color: #afafaf;
+    text-decoration: none;
+    font-family: roboto slab;
+    position: absolute;
+    right: 31px;
+    &:hover {
+      color: $main1;
+    }
+  }
 }
 
 .grey {
@@ -284,11 +294,11 @@ pre {
 }
 
 .contact_area {
-  background: -webkit-linear-gradient($main1, $main2);
+  background: linear-gradient($main3, $main1);;
   max-width: 500px;
   width: 100%;
   height: 350px;
-  border-bottom: 4px solid $border2;
+  border-bottom: 4px solid $border1;
   border-radius: 6px;
   color: white;
   font-family: $font;
@@ -321,12 +331,12 @@ pre {
     padding: 10px 19px;
     letter-spacing: 1px;
     border: 2px solid white;
-    border-radius: 8px;
+    border-radius: 50px;
     display: inline-block;
     -webkit-transition: all 0.2s ease-out;
     &:hover {
       background: white;
-      color: $main2;
+      color: $main1;
     }
   }
   .split {
@@ -344,6 +354,70 @@ pre {
 
 .grey_bars {
   color: #777777 !important;
+}
+
+/* ------------------------------- LOGIN PAGE ------------------------------- */
+
+.login_page {
+  width: 100%;
+  height: calc(100vh - 56px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login_wrapper {
+  max-width: 450px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px 0px 40px 0px;
+  text-align: center;
+  border-radius: 3px;
+  background: linear-gradient($main3, $main1);
+  border-bottom: 4px solid $border1;
+  font-family: $font;
+  letter-spacing: 1px;
+  border-top: 2px solid #bd82ff;
+  h1 {
+    font-weight: 300;
+    color: white;
+    margin: 0px 0px 20px 0px;
+  }
+  form {
+    max-width: 300px;
+    width: 100%;
+    margin: 0px auto;
+    input {
+      width: 100%;
+      display: block;
+      margin-bottom: 15px;
+      padding: 13px 18px;
+      border: 0px;
+      border-radius: 4px;
+      font-size: 14px;
+      letter-spacing: 1px;
+      font-family: $font;
+      color: #9839ff;
+      &[type='submit'] {
+        background: #00000000;
+        cursor: pointer;
+        color: white;
+        font-weight: 600;
+        border-radius: 50px;
+        margin-top: 20px;
+        border: 2px solid white;
+        -webkit-transition: all 0.2s ease-out;
+        &:hover {
+          background: white;
+          color: $main1;
+          border: 2px solid white;
+        }
+      }
+      &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 30px white inset;
+      }
+    }
+  }
 }
 
 /* ------------------------------- SCROLLBAR ------------------------------- */
@@ -406,6 +480,7 @@ pre {
 }
 
 @media screen and (max-width: 530px) {
+  $headerheight: 30em;
   .header_area {
     h1 {
       font-size: 30px;
@@ -419,7 +494,10 @@ pre {
     }
   }
   .header {
-    height: 30em
+    height: $headerheight;
+    .cover {
+      height: $headerheight;
+    }
   }
 
   .contact_wrapper {
@@ -443,11 +521,19 @@ pre {
       width: 70%;
     }
   }
-
+  .login_page {
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .login_wrapper {
+    padding: 30px 10px 40px 10px;
+    box-sizing: border-box;
+  }
 }
 
 
 @media screen and (max-width: 450px) {
+  $headerheight: 25em;
   .content_wrapper {
     img {
       width: 7em;
@@ -463,13 +549,20 @@ pre {
     }
   }
   .header {
-    height: 25em;
+    height: $headerheight;
+    .cover {
+      height: $headerheight;
+    }
   }
 }
 
 @media screen and (max-width: 420px) {
+  $headerheight: 20em;
   .header {
-    height: 20em;
+    height: $headerheight;
+    .cover {
+      height: $headerheight;
+    }
   }
   .contact_area {
     height: 270px;
@@ -477,6 +570,7 @@ pre {
 }
 
 @media screen and (max-width: 390px) {
+  $headerheight: 18em;
   .header_area {
     h1 {
       font-size: 25px;
@@ -490,7 +584,10 @@ pre {
     }
   }
   .header {
-    height: 18em;
+    height: $headerheight;
+    .cover {
+      height: $headerheight;
+    }
   }
   .footer {
     font-size: 13px;
