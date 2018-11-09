@@ -6,6 +6,8 @@
 
       <div class="header">
 
+      <div class="cover"></div>
+
         <div class="nav">
           <ul>
             <a href="index.php"><li class="active">Home</li></a>
@@ -31,6 +33,7 @@
         </div>
 
       </div>
+
 
       <div class="section">
         <div class="content_wrapper">

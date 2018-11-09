@@ -5,8 +5,10 @@ body {
 .header {
   width: 100%;
   height: 40em;
-  background: linear-gradient(#4A00E0, #8E2DE2);
-  font-family: roboto slab; }
+  font-family: roboto slab;
+  background-image: url("../images/texture3.jpeg");
+  background-size: cover;
+  background-position: center center; }
   .header h1 {
     font-weight: 400;
     margin: 0px;
@@ -17,6 +19,12 @@ body {
     font-weight: 300;
     font-size: 35px;
     margin: 0px; }
+  .header .cover {
+    background: linear-gradient(#333399, #ff00cc);
+    opacity: 0.95;
+    width: 100%;
+    height: 40em;
+    position: absolute; }
 
 .header_area {
   width: 100%;
@@ -25,7 +33,9 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-bottom: 4px solid #7d27cc; }
+  border-bottom: 4px solid #dc00b1;
+  position: relative;
+  z-index: 5; }
 
 .brand {
   float: left;
@@ -37,7 +47,8 @@ body {
 
 .nav {
   width: 100%;
-  position: absolute; }
+  position: absolute;
+  z-index: 7; }
   .nav ul {
     margin: auto;
     list-style-type: none;
@@ -93,7 +104,7 @@ body {
   font-size: 36px;
   right: 17px;
   top: 12px;
-  z-index: 3;
+  z-index: 6;
   display: none;
   cursor: pointer; }
 
@@ -110,7 +121,7 @@ body {
   -webkit-transition: all 0.2s ease-out; }
   .portfolio_button:hover {
     background: white;
-    color: #8E2DE2; }
+    color: #ff00cc; }
 
 pre {
   font-family: roboto slab; }
@@ -167,7 +178,7 @@ pre {
   border: 2px solid #d4d4d4;
   -webkit-transition: all 0.2s ease-out; }
   .project_latest:hover {
-    border: 2px solid #8E2DE2; }
+    border: 2px solid #ff00cc; }
 
 .latest_projects {
   justify-content: center;
@@ -199,8 +210,8 @@ pre {
     color: #cecece; }
   .projects_link:hover {
     color: white;
-    background: #8E2DE2;
-    border: 2px solid #7d27cc; }
+    background: #ff00cc;
+    border: 2px solid #dc00b1; }
     .projects_link:hover i {
       color: white; }
 
@@ -210,7 +221,7 @@ pre {
   height: 3.5em; }
   .navbg ul a {
     font-family: roboto slab;
-    color: #4A00E0; }
+    color: #333399; }
     .navbg ul a .active {
       font-weight: 600;
       opacity: 1 !important; }
@@ -223,11 +234,11 @@ pre {
   align-items: center; }
 
 .contact_area {
-  background: -webkit-linear-gradient(#4A00E0, #8E2DE2);
+  background: -webkit-linear-gradient(#333399, #ff00cc);
   max-width: 500px;
   width: 100%;
   height: 350px;
-  border-bottom: 4px solid #7d27cc;
+  border-bottom: 4px solid #dc00b1;
   border-radius: 6px;
   color: white;
   font-family: roboto slab;
@@ -261,7 +272,7 @@ pre {
     -webkit-transition: all 0.2s ease-out; }
     .contact_area .mail_link:hover {
       background: white;
-      color: #8E2DE2; }
+      color: #ff00cc; }
   .contact_area .split {
     width: 60%;
     border-bottom: 2px solid white;
