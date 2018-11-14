@@ -76,9 +76,10 @@ body {
   -webkit-transition: all 0.2s ease-out;
   opacity: 0;
   font-family: roboto slab;
-  z-index: 7; }
+  z-index: 7;
+  display: none; }
   .nav_collapsed ul {
-    background: #f1f1f1;
+    background: white;
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -95,17 +96,28 @@ body {
         -webkit-transition: all 0.2s ease-out; }
         .nav_collapsed ul a li:hover {
           padding: 16px 15px 16px 29px;
-          background: #e4e4e4;
+          background: #f1f1f1;
           color: #ff00cc; }
 
-.fas.fa-bars {
-  color: #ff00cc;
-  position: fixed;
-  font-size: 36px;
-  right: 17px;
-  top: 12px;
+.bars_circle {
+  background: white;
+  right: 10px;
+  top: 9px;
   z-index: 8;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  border-radius: 32px;
   display: none;
+  cursor: pointer; }
+
+.fas.fa-bars {
+  color: #333399;
+  position: fixed;
+  font-size: 29px;
+  right: 22px;
+  top: 21px;
+  z-index: 9;
   cursor: pointer; }
 
 .portfolio_button {
@@ -113,8 +125,8 @@ body {
   text-decoration: none;
   font-weight: 500;
   border: 2px solid white;
-  padding: 8px 15px;
-  border-radius: 8px;
+  padding: 10px 25px;
+  border-radius: 38px;
   margin-top: 40px;
   letter-spacing: 1px;
   font-family: roboto slab;
@@ -133,17 +145,30 @@ pre {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #bfbfbf;
+  color: #3333999e;
   font-size: 16px;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  margin-top: 6em; }
   .footer a {
-    color: #afafaf;
+    color: #3333999e;
     text-decoration: none;
     font-family: roboto slab;
     position: absolute;
-    right: 31px; }
+    right: 31px;
+    transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out; }
     .footer a:hover {
       color: #333399; }
+
+.blue_footer {
+  background: #333399;
+  color: #9292f9; }
+  .blue_footer a {
+    color: #9292f9; }
+    .blue_footer a:hover {
+      color: white; }
 
 .grey {
   background: #efefef; }
@@ -298,7 +323,8 @@ pre {
   background: -webkit-linear-gradient(#9839ff, #333399);
   color: white;
   font-family: roboto slab;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: -6em; }
   .hire h1 {
     color: white;
     font-weight: 300; }
@@ -321,8 +347,8 @@ pre {
   display: block;
   margin: 20px auto;
   font-family: roboto slab;
-  color: #333399;
-  border: 2px solid #333399;
+  color: #9839ff;
+  border: 2px solid #9839ff;
   padding: 10px 15px;
   border-radius: 50px;
   width: 100px;
@@ -332,8 +358,18 @@ pre {
   letter-spacing: 1px;
   -webkit-transition: all 0.2s ease-out; }
   .back_button:hover {
-    background: #333399;
+    background: #9839ff;
     color: white; }
+
+.wave {
+  width: 100%;
+  background-image: url("../images/purplewave.png");
+  background-position: center;
+  height: 271px; }
+
+.profile_image {
+  border: 2px solid #dadada;
+  box-shadow: 0px 0px 31px 0px #00000030; }
 
 /* ------------------------------- PORTFOLIO PAGE ------------------------------- */
 .projects_wrapper {
@@ -466,8 +502,18 @@ pre {
   .nav {
     display: none; }
 
-  .fas.fa-bars {
-    display: block; } }
+  .nav_collapsed {
+    display: block; }
+
+  .bars_circle {
+    display: block; }
+
+  .footer {
+    flex-direction: column; }
+    .footer a {
+      position: relative;
+      right: 0;
+      font-size: 12px; } }
 @media screen and (max-width: 530px) {
   .header_area h1 {
     font-size: 30px; }
@@ -503,7 +549,11 @@ pre {
 
   .login_wrapper {
     padding: 30px 10px 40px 10px;
-    box-sizing: border-box; } }
+    box-sizing: border-box; }
+
+  .content_wrapper {
+    box-sizing: border-box;
+    padding: 3em 1em; } }
 @media screen and (max-width: 450px) {
   .content_wrapper img {
     width: 7em; }

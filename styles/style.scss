@@ -96,8 +96,9 @@ body {
   opacity: 0;
   font-family: $font;
   z-index: 7;
+  display: none;
   ul {
-    background: #f1f1f1;
+    background: white;
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -114,7 +115,7 @@ body {
           -webkit-transition: all 0.2s ease-out;
           &:hover {
             padding: 16px 15px 16px 29px;
-            background: #e4e4e4;
+            background: #f1f1f1;
             color: $main2;
           }
        }
@@ -122,14 +123,25 @@ body {
   }
 }
 
-.fas.fa-bars {
-  color: $main2;
-  position: fixed;
-  font-size: 36px;
-  right: 17px;
-  top: 12px;
+.bars_circle {
+  background: white;
+  right: 10px;
+  top: 9px;
   z-index: 8;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  border-radius: 32px;
   display: none;
+  cursor: pointer;
+}
+.fas.fa-bars {
+  color: $main1;
+  position: fixed;
+  font-size: 29px;
+  right: 22px;
+  top: 21px;
+  z-index: 9;
   cursor: pointer;
 }
 
@@ -139,8 +151,8 @@ body {
   text-decoration: none;
   font-weight: 500;
   border: 2px solid white;
-  padding: 8px 15px;
-  border-radius: 8px;
+  padding: 10px 25px;
+  border-radius: 38px;
   margin-top: 40px;
   letter-spacing: 1px;
   font-family: $font;
@@ -163,17 +175,33 @@ pre {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #bfbfbf;
+  color: #3333999e;
   font-size: 16px;
   letter-spacing: 1px;
+  margin-top: 6em;
   a {
-    color: #afafaf;
+    color: #3333999e;
     text-decoration: none;
     font-family: roboto slab;
     position: absolute;
     right: 31px;
+    transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
     &:hover {
       color: $main1;
+    }
+  }
+}
+
+.blue_footer {
+  background: $main1;
+  color: #9292f9;
+  a {
+    color: #9292f9;
+    &:hover {
+      color: white;
     }
   }
 }
@@ -361,6 +389,7 @@ pre {
   color: white;
   font-family: $font;
   text-align: center;
+  margin-bottom:-6em;
   h1 {
     color: white;
     font-weight: 300;
@@ -387,8 +416,8 @@ pre {
   display: block;
   margin: 20px auto;
   font-family: $font;
-  color: $main1;
-  border: 2px solid $main1;
+  color: $main3;
+  border: 2px solid $main3;
   padding: 10px 15px;
   border-radius: 50px;
   width: 100px;
@@ -398,9 +427,21 @@ pre {
   letter-spacing: 1px;
   -webkit-transition: all 0.2s ease-out;
   &:hover {
-    background: $main1;
+    background: $main3;
     color: white;
   }
+}
+
+.wave {
+  width: 100%;
+  background-image: url('../images/purplewave.png');
+  background-position: center;
+  height: 271px;
+}
+
+.profile_image {
+  border: 2px solid #dadada;
+  box-shadow: 0px 0px 31px 0px #00000030;
 }
 
 /* ------------------------------- PORTFOLIO PAGE ------------------------------- */
@@ -575,8 +616,19 @@ pre {
   .nav {
     display: none;
   }
-  .fas.fa-bars {
+  .nav_collapsed {
     display: block;
+  }
+  .bars_circle {
+    display: block;
+  }
+  .footer {
+    flex-direction: column;
+    a {
+      position: relative;
+      right: 0;
+      font-size: 12px;
+    }
   }
 }
 
@@ -629,6 +681,11 @@ pre {
   .login_wrapper {
     padding: 30px 10px 40px 10px;
     box-sizing: border-box;
+  }
+
+  .content_wrapper {
+    box-sizing: border-box;
+    padding: 3em 1em;
   }
 }
 

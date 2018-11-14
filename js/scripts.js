@@ -1,6 +1,6 @@
 $(document).ready(function(){
-    $(".fas.fa-bars").click(function(){
+    $(".bars_circle").click(function(){
         $(".nav_collapsed").toggleClass("expand");
-        $(this).toggleClass("grey_bars");
+        $(".fas.fa-bars").toggleClass("grey_bars");
     });
 });

@@ -12,7 +12,8 @@
           </ul>
         </div>
 
-        <i class="fas fa-bars"></i>
+        <div class="bars_circle"><i class="fas fa-bars"></i></div>
+
         <div class="nav_collapsed">
           <ul>
             <a href="index.php"><li>Home</li></a>
